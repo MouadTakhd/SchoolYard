@@ -24,7 +24,7 @@ import { ENV } from '@/config/env'
 export const Route = createFileRoute('/app/')({
   head: () => ({
     meta: [
-      { title: 'Administrative Dashboard | EduManage' },
+      { title: 'Dashboard | Schoolyard' },
       { name: 'description', content: 'School management dashboard overview for staff rosters, schedules, and document distribution.' },
     ],
   }),
@@ -137,7 +137,7 @@ function DashboardOverview() {
               <div className="flex items-center justify-between">
                 <div>
                   <CardTitle className="text-lg font-extrabold tracking-tight">Recent Administrative Events</CardTitle>
-                  <CardDescription className="text-xs font-medium mt-1">Realtime validation stream of core modifications within the platform.</CardDescription>
+                  <CardDescription className="text-xs font-medium mt-1">Live feed of administrative activity across the platform.</CardDescription>
                 </div>
                 <Badge variant="outline" className="text-[10px] font-mono tracking-widest uppercase bg-primary/10 text-primary border-primary/20 px-3 py-1">Realtime Log</Badge>
               </div>
@@ -169,7 +169,7 @@ function DashboardOverview() {
 
             <CardHeader className="pb-4 p-6">
               <CardTitle className="text-lg font-extrabold tracking-tight">Quick Actions</CardTitle>
-              <CardDescription className="text-xs font-medium mt-1">Direct action channels bypassing structural page drilling.</CardDescription>
+              <CardDescription className="text-xs font-medium mt-1">Shortcuts to common administrative tasks.</CardDescription>
             </CardHeader>
             <CardContent className="p-6 pt-0 space-y-3">
 

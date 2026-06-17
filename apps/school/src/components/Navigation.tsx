@@ -26,9 +26,9 @@ import { useTheme } from './ui/theme-provider'
 const NAV_ITEMS: SidebarItem[] = [
   { to: '/app', label: 'Dashboard', icon: <LayoutDashboard className="h-4 w-4" />, exact: true },
   { to: '/app/employees', label: 'Teachers', icon: <Users className="h-4 w-4" /> },
-  { to: '/app/timetable', label: 'Students/ classes', icon: <GraduationCap className="h-4 w-4" /> },
+  { to: '/app/timetable', label: 'Students & Classes', icon: <GraduationCap className="h-4 w-4" /> },
   { to: '/app/documents', label: 'Billing', icon: <CreditCard className="h-4 w-4" /> },
-  { to: '/app/settings', label: 'Settings and profile', icon: <Settings className="h-4 w-4" /> },
+  { to: '/app/settings', label: 'Settings', icon: <Settings className="h-4 w-4" /> },
   { to: '/app/exams', label: 'Exams', icon: <ClipboardList className="h-4 w-4" /> },
   { to: '/app/features', label: 'Features', icon: <Layers className="h-4 w-4" />, badge: "NEW" },
 ]
@@ -55,7 +55,7 @@ export default function Navigation() {
                 {ENV.APP_NAME}
               </span>
               <span className="text-[10px] text-muted-foreground font-mono font-semibold tracking-wider uppercase mt-1 leading-none">
-                Workspace Panel
+                School Management
               </span>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function Navigation() {
           <button
             onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
             className="p-1.5 rounded-lg text-muted-foreground hover:text-foreground hover:bg-muted/80 border border-transparent hover:border-border/40 transition-all shadow-none shrink-0"
-            aria-label="Toggle layout color token parameters"
+            aria-label="Toggle light/dark theme"
           >
             {theme === 'dark' ? <Sun size={14} /> : <Moon size={14} />}
           </button>

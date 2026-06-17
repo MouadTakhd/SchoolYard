@@ -54,8 +54,8 @@ const TRANSLATIONS = {
     hasAccount: "Already have an account? ",
     signInLink: "Sign up",
     signUpLink: "Sign in",
-    rights: "Inc. All rights reserved.",
-    nextGen: "Next-Generation Management"
+    rights: "All rights reserved.",
+    nextGen: "Next-Generation School Management"
   },
   fr: {
     heroTitle: "Gérez votre école, magnifiquement.",
@@ -77,8 +77,8 @@ const TRANSLATIONS = {
     hasAccount: "Vous avez déjà un compte ? ",
     signInLink: "S'inscrire",
     signUpLink: "Se connecter",
-    rights: "Inc. Tous droits réservés.",
-    nextGen: "Gestion de nouvelle génération"
+    rights: "Tous droits réservés.",
+    nextGen: "Gestion scolaire nouvelle génération"
   },
   ar: {
     heroTitle: "أدر مدرستك ببراعة.",
@@ -100,8 +100,8 @@ const TRANSLATIONS = {
     hasAccount: "لديك حساب بالفعل؟ ",
     signInLink: "إنشاء حساب",
     signUpLink: "تسجيل الدخول",
-    rights: "Inc. جميع الحقوق محفوظة.",
-    nextGen: "إدارة الجيل القادم"
+    rights: "جميع الحقوق محفوظة.",
+    nextGen: "إدارة مدرسية من الجيل القادم"
   }
 }
 

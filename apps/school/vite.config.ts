@@ -4,7 +4,7 @@ import react from '@vitejs/plugin-react'
 import { TanStackRouterVite } from '@tanstack/router-plugin/vite'
 import path from 'path'
 export default defineConfig(({mode})=>{
-  const env = loadEnv(mode,"env");
+  const env = loadEnv(mode, ".");
   console.log(`Using env mode ${mode}`,env);
 
 
