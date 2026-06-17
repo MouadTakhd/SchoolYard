@@ -1,0 +1,162 @@
+/* ==========================================================================
+   APP STYLESHEET (EduManage OS v4)
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "@fontsource-variable/geist";
+
+@custom-variant dark (&:is(.dark *));
+
+@config "../tailwind.config.ts";
+
+/* -----------------------------
+   BASE RESET & DESIGN SYSTEM
+------------------------------*/
+@layer base {
+  html,
+  body,
+  #root {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+
+  body {
+    @apply antialiased bg-background text-foreground;
+    overflow-x: hidden;
+    font-family: var(--font-sans);
+  }
+
+  * {
+    box-sizing: border-box;
+    @apply transition-colors duration-200;
+  }
+}
+
+/* -----------------------------
+   CUSTOM GLOBAL UTILITIES
+------------------------------*/
+@utility glass {
+  background: color-mix(in oklab, var(--card) 72%, transparent);
+  backdrop-filter: blur(14px);
+  border: 1px solid var(--border);
+}
+
+/* -----------------------------
+   THEME DESIGN TOKENS MAP
+------------------------------*/
+@theme inline {
+  --font-sans: 'Geist Variable', 'Inter', sans-serif;
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-destructive: var(--destructive);
+
+  --radius: 0.9rem;
+}
+
+/* -----------------------------
+   LIGHT MODE: Pearl & Sapphire
+------------------------------*/
+:root {
+  --background: oklch(0.985 0.004 240);
+  --foreground: oklch(0.21 0.016 245);
+
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.21 0.016 245);
+
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.21 0.016 245);
+
+  /* Deep Royal Sapphire */
+  --primary: oklch(0.52 0.19 250);
+  --primary-foreground: oklch(0.99 0.002 240);
+
+  /* Executive Amethyst Blue */
+  --secondary: oklch(0.58 0.15 280);
+  --secondary-foreground: oklch(0.99 0.002 240);
+
+  /* Crisp Cyber Mint */
+  --accent: oklch(0.64 0.16 175);
+  --accent-foreground: oklch(0.18 0.03 175);
+
+  --muted: oklch(0.94 0.006 245);
+  --muted-foreground: oklch(0.52 0.016 245);
+
+  --border: oklch(0.91 0.006 245);
+  --input: oklch(0.89 0.006 245);
+  --ring: oklch(0.52 0.19 250);
+
+  --success: oklch(0.68 0.16 160);
+  --warning: oklch(0.82 0.15 85);
+  --destructive: oklch(0.62 0.21 28);
+}
+
+/* -----------------------------
+   DARK MODE: Obsidian & Cyan-Mint Glow
+------------------------------*/
+.dark {
+  --background: oklch(0.13 0.014 245);
+  --foreground: oklch(0.97 0.004 240);
+
+  --card: oklch(0.17 0.016 245);
+  --card-foreground: oklch(0.97 0.004 240);
+
+  --popover: oklch(0.17 0.016 245);
+  --popover-foreground: oklch(0.97 0.004 240);
+
+  /* Bright Tech Sapphire */
+  --primary: oklch(0.66 0.18 250);
+  --primary-foreground: oklch(0.12 0.015 245);
+
+  /* Luminous Amethyst */
+  --secondary: oklch(0.71 0.15 280);
+  --secondary-foreground: oklch(0.12 0.015 245);
+
+  /* Neon Glow Cyber Mint */
+  --accent: oklch(0.76 0.15 175);
+  --accent-foreground: oklch(0.12 0.02 175);
+
+  --muted: oklch(0.23 0.014 245);
+  --muted-foreground: oklch(0.68 0.014 240);
+
+  --border: oklch(0.27 0.014 245);
+  --input: oklch(0.25 0.014 245);
+  --ring: oklch(0.66 0.18 250);
+
+  --success: oklch(0.74 0.16 160);
+  --warning: oklch(0.84 0.15 85);
+  --destructive: oklch(0.68 0.21 28);
+}
