@@ -15,12 +15,10 @@ import {
   Menu,
   X,
   LogOut,
-  ChevronRight
+  ChevronRight,
+  BookOpen
 } from 'lucide-react'
 import { useState } from 'react'
-import img_dark from '../public/logo-icon-dark-transparent.png'
-import img_light from '../public/logo-icon-light-transparent.png'
-
 import { useTheme } from './ui/theme-provider'
 
 const NAV_ITEMS: SidebarItem[] = [
@@ -37,8 +35,6 @@ export default function Navigation() {
   const { theme, setTheme } = useTheme()
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-  const logoSrc = theme === "dark" ? img_light : img_dark
-
   // Master Sidebar Viewport Content
   const SidebarContent = () => (
     <div className="h-full flex flex-col justify-between p-4 bg-card">
@@ -47,8 +43,8 @@ export default function Navigation() {
         {/* Brand header */}
         <Link to="/" onClick={() => setMobileMenuOpen(false)} className="block px-2 focus:outline-none">
           <div className="flex items-center gap-3">
-            <div className="h-8 w-8 rounded-xl bg-primary flex items-center justify-center text-primary-foreground shrink-0 shadow-sm overflow-hidden">
-              <img src={logoSrc} alt="" className="h-5 w-5 object-contain" />
+            <div className="h-8 w-8 rounded-xl bg-primary flex items-center justify-center text-primary-foreground shrink-0 shadow-sm">
+              <BookOpen className="h-4 w-4" />
             </div>
             <div className="flex flex-col">
               <span className="font-bold text-sm tracking-tight text-foreground leading-none">
@@ -134,8 +130,8 @@ export default function Navigation() {
       {/* MOBILE HEADER CONTEXT ROW (Hidden on Desktop layouts) */}
       <header className="md:hidden sticky top-0 z-40 w-full h-14 border-b border-border/40 bg-background/80 backdrop-blur-md px-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <div className="h-7 w-7 rounded-lg bg-primary flex items-center justify-center text-primary-foreground font-bold text-xs">
-            U
+          <div className="h-7 w-7 rounded-lg bg-primary flex items-center justify-center text-primary-foreground">
+            <BookOpen className="h-3.5 w-3.5" />
           </div>
           <span className="font-bold text-xs tracking-tight text-foreground">{ENV.APP_NAME}</span>
         </div>
